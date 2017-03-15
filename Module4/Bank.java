@@ -12,6 +12,10 @@ public abstract class Bank {
     private long rating;
     private long totalCapital;
 
+    enum Currency {EUR, USD}
+
+    Bank(){}
+
     Bank(long id, String bankCountry, Currency currency,  int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital){
       this.id = id;
       this.bankCountry = bankCountry;
@@ -26,8 +30,8 @@ public abstract class Bank {
 
    public abstract int getLimitOfWithdrawal();
    public abstract int getLimitOfFunding();
-   public abstract int getMonthlyRate();
-   public abstract int getCommission(int summ);
+   public abstract double getMonthlyRate();
+   public abstract double getCommission(int summ);
    public double moneyPaidMonthlyForSalary(){return avrSalaryOfEmployee * numberOfEmployees;}
 
     // Getters and Setters
