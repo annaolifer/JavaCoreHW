@@ -20,6 +20,25 @@ public class Room {
        this.cityName = cityName;
    }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Room room = (Room) obj;
+        return price == room.price && persons == room.persons && cityName.equals(room.cityName);
+        }
+
+   @Override
+    public int hashCode() {
+       int result = 17;
+       result = 37 * result + price;
+       result = 37 * result + persons;
+       result = 37 * result + (cityName == null ? 0 : cityName.hashCode());
+       return result;
+    }
+
+ // Getters and setters
+
     public long getId() {
         return id;
     }
