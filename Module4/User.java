@@ -22,7 +22,7 @@ public class User {
    }
 
    @Override
-   public String toString(){return " " + id + " " + name + " " + balance + " " + monthsOfEmployment + " " + companyName + " " + salary + " " + bank;}
+   public String toString(){return String.format("Client: %s\nCompany: %s\n", name, companyName);}
 
     // Getters and Setters
 
