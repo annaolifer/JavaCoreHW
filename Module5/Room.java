@@ -11,6 +11,8 @@ public class Room {
    private String hotelName;
    private String cityName;
 
+   Room(){}
+
    Room(long id, int price, int persons, Date dateAvailableFrom, String hotelName, String cityName){
        this.id = id;
        this.price = price;
@@ -21,23 +23,28 @@ public class Room {
    }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Room room = (Room) obj;
-        return price == room.price && persons == room.persons && cityName.equals(room.cityName);
-        }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-   @Override
-    public int hashCode() {
-       int result = 17;
-       result = 37 * result + price;
-       result = 37 * result + persons;
-       result = 37 * result + (cityName == null ? 0 : cityName.hashCode());
-       return result;
+        Room room = (Room) o;
+
+        if (price != room.price) return false;
+        if (persons != room.persons) return false;
+        return cityName.equals(room.cityName);
     }
 
- // Getters and setters
+    @Override
+    public int hashCode() {
+        int result = price;
+        result = 31 * result + persons;
+        result = 31 * result + cityName.hashCode();
+        return result;
+    }
+
+
+
+    // Getters and setters
 
     public long getId() {
         return id;
