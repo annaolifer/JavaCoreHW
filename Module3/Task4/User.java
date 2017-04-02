@@ -9,7 +9,7 @@ public class User {
     private int salary;
     private String currency;
 
-    User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency){
+      User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency){
         this.name = name;
         this.balance = balance;
         this.monthsOfEmployment = monthsOfEmployment;
@@ -20,28 +20,31 @@ public class User {
 
     // method 1
 
-    private void paySalary(){balance += salary;}
+    public void paySalary(){balance += salary;
+        System.out.println("New balance: " + balance);}
 
     // method 2
 
-    int sum;
-    double commission;
-
-   private double withdraw(int sum){
-        balance -= sum - commission;
-        if (sum < 1000){commission = 0.05 * sum;}
-        else {commission = 0.1 * sum;}
+    public double withdraw(int sum){
+        double commission;
+        if (sum < 1000)commission = 0.05 * sum;
+        else commission = 0.1 * sum;
+        balance -= sum + commission;
         return balance;
     }
+
     // method 3
 
-   private int companyNameLength = companyName.length();{System.out.println(companyNameLength);}
-
+    public int companyNameLength(){
+        return  companyName.length();
+    }
 
     // method 4
 
-    int addMonth;
-    private void monthIncreaser(int addMonth){monthsOfEmployment += addMonth;}
+    public void monthIncreaser(int addMonth){
+        monthsOfEmployment += addMonth;
+        System.out.println("Updated number of months of employment: " + monthsOfEmployment);
+    }
 
 // getters and setters
 
