@@ -16,7 +16,7 @@ public class UsersMain {
                 users[0] = user1;
                 users[1] = user2;
                 users[2] = user3;
-                users[3] = user3;
+                users[3] = user4;
 
                 System.out.println(Arrays.deepToString(UserUtils.usersWithConditionalBalance(users, 7000)));
                 System.out.println(Arrays.deepToString(UserUtils.uniqueUsers(users)));
