@@ -18,6 +18,7 @@ public class Controller {
         Room[] api1 = apis[0].findRooms(price, persons, city, hotel);
         Room[] api2 = apis[1].findRooms(price, persons, city, hotel);
         Room[] api3 = apis[2].findRooms(price, persons, city, hotel);
+
         if (api1 != null && api2 != null && api3 != null) {
             Room[] createDB = new Room[api1.length + api2.length + api3.length];
 
