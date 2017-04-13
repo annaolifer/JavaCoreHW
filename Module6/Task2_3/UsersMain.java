@@ -18,11 +18,11 @@ public class UsersMain {
                 users[2] = user3;
                 users[3] = user3;
 
-                System.out.println(Arrays.toString(UserUtils.usersWithConditionalBalance(users, 7000)));
-                System.out.println(Arrays.toString(UserUtils.uniqueUsers(users)));
-                System.out.println(Arrays.toString(UserUtils.paySalaryToUsers(users)));
+                System.out.println(Arrays.deepToString(UserUtils.usersWithConditionalBalance(users, 7000)));
+                System.out.println(Arrays.deepToString(UserUtils.uniqueUsers(users)));
+                System.out.println(Arrays.deepToString(UserUtils.paySalaryToUsers(users)));
                 System.out.println(Arrays.toString(UserUtils.getUsersid(users)));
-                System.out.println(Arrays.toString(UserUtils.deleteEmptyUsers(users)));
+                System.out.println(Arrays.deepToString(UserUtils.deleteEmptyUsers(users)));
 
     }
     // Создайте класс UsersMain с методом main, где создайте несколько тестовых пользователей  и продемонстрируйте,
