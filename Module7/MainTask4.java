@@ -6,33 +6,55 @@ import java.util.LinkedList;
 public class MainTask4 {
     public static void main(String[] args) {
 
-        ArrayList<Integer> list1 = new ArrayList<>(1000);
-        ArrayList<String> list2 = new ArrayList<>(10000);
+
+        ArrayList<String> list = new ArrayList<>();
+        ArrayList<Integer> list1 = new ArrayList<>();
+
+        LinkedList<String> list2 = new LinkedList<>();
         LinkedList<Integer> list3 = new LinkedList<>();
-        LinkedList<String> list4 = new LinkedList<>();
-
-        list1.add(2,100);
-        list2.add(2, "Sun");
-        list3.add(2,100);
-        list4.add(2,"Rain");
-
-        list1.set(5,34);
-        list2.set(3,"Moon");
-        list3.set(3,13);
-        list4.set(1,"Life");
-
-        list1.get(23);
-        list2.get(25);
-        list3.get(30);
-        list4.get(45);
-
-        list1.remove(27);
-        list2.remove(26);
-        list3.remove(38);
-        list4.remove(49);
 
 
+        long start = System.currentTimeMillis();
+
+             for(int i = 0 ; i < 1000; i ++) {
+                 list.add("Hello!");}
+
+        long finish = System.currentTimeMillis();
+
+        System.out.println(finish - start);
+
+        System.out.println("=======================================================================");
 
 
+        long start1 = System.currentTimeMillis();
+
+        for(int i = 0 ; i < 10000; i ++) {
+            list1.add(20);}
+
+        long finish1 = System.currentTimeMillis();
+
+        System.out.println(finish1 - start1);
+        System.out.println("=======================================================================");
+
+
+        long start2 = System.currentTimeMillis();
+
+        for(int i = 0 ; i < 1000; i ++) {
+            list2.add("Hello!");}
+
+        long finish2 = System.currentTimeMillis();
+
+        System.out.println(finish2 - start2);
+        System.out.println("=======================================================================");
+
+
+        long start3 = System.currentTimeMillis();
+
+        for(int i = 0 ; i < 10000; i ++) {
+            list3.add(20);}
+
+        long finish3 = System.currentTimeMillis();
+
+        System.out.println(finish3 - start3);
     }
 }
